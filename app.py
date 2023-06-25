@@ -9,8 +9,8 @@ st.set_page_config(
     layout='wide'
 )
 st.title('Book Recommender System')
-
-popular_df = pickle.load(open('popular.pkl','rb'))
+popular_df = pd.read_pickle("popular.pkl")
+# popular_df = pickle.load(open('popular.pkl','rb'))
 pt = pickle.load(open('pt.pkl','rb'))
 books = pickle.load(open('books.pkl','rb'))
 similarity_scores = pickle.load(open('similarity_scores.pkl','rb'))
